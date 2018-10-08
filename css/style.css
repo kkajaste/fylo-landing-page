@@ -5,7 +5,7 @@
   --n-l-gray: hsl(106, 0%, 98%);
   --n-gray: hsl(0, 0%, 50%);
   --n-d-gray: hsl(0, 0%, 17%);
-  --white: hsl(0,100%,100%);
+  --n-white: hsl(0,100%,100%);
   }
 
 .attribution { 
@@ -21,7 +21,13 @@ header {
     margin-top: 30px;
 }
 
-section {
+body {
+    display: grid;
+    grid-template-columns: 20% 8% 12% 10% 8% 12% 20%;
+    grid-template-rows: 15% 5% 10% 30% 10% 30%;
+}
+
+/*section {
     float: left;
     margin-left: 3%;
     width: 43%;
@@ -37,7 +43,7 @@ aside {
     float: right;
     width: 44%;
   }
-
+*/
 p {
     font-weight: 400;
     color: var(--n-gray);
@@ -46,6 +52,14 @@ p {
 h2 {
     color: var(--p-blue);
     font-size: 24px;
+}
+
+footer {
+    /*position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+    background-color: var(--p-blue);
 }
 
 .header-font {
@@ -83,7 +97,7 @@ h2 {
 }
 .main-background {
     position: absolute;
-    float: right;
+    /*float: right;*/
     z-index: -1;
 }
  .main-illustration {
@@ -131,4 +145,93 @@ h2 {
     background-size: cover;
     position: relative;
     z-index: -1;
+}
+
+.item-first-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+}
+
+.item-first-2 {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.item-second-1 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 2;
+}
+
+.item-third-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+}
+
+.item-third-2 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+}
+
+.item-third-3 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 3;
+}
+
+.item-fourth-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+
+.item-fourth-2 {
+    grid-column-start: 3;
+    grid-column-end: 8;
+    grid-row-start: 4;
+}
+
+.item-fifth-1 {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 5;
+}
+
+.item-footer-1 {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 6;
+}
+
+.item-footer-2 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 6;
+}
+
+.item-footer-3 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 6;
+}
+
+.item-footer-4 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 6;
+}
+
+.item-footer-5 {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 6;
+}
+
+.masonry {
+    column-count: 3;
+    column-gap: 6px;
+    column-span: all;
 }
